@@ -143,13 +143,24 @@
     </div>
 
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-        import { getAuth, signInAnonymously, onAuthStateChanged, signOut, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-        import { getFirestore, doc, getDoc, setDoc, onSnapshot, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+        
+        import { getAuth, signInAnonymously, onAuthStateChanged, signOut, signInWithCustomToken } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-auth.js";
+        import { getFirestore, doc, getDoc, setDoc, onSnapshot, updateDoc, arrayUnion } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-firestore.js";
 
-        // --- CONFIGURATION ---
-        const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : { apiKey: "your-fallback-api-key", authDomain: "...", projectId: "..." };
-        const appId = typeof __app_id !== 'undefined' ? __app_id : 'default-loyalty-app-booking';
+        // --- CONFIGURATION ---''
+        const firebaseConfig = {
+                apiKey: "AIzaSyC5In1sQAtxdvgM6Kgdah9_sqBQHwGivPw",
+                authDomain: "tasman-loyalty.firebaseapp.com",
+                projectId: "tasman-loyalty",
+                storageBucket: "tasman-loyalty.firebasestorage.app",
+                messagingSenderId: "529023143047",
+                appId: "1:529023143047:web:0e019e092725e700363c22",
+                measurementId: "G-ZMQL08N4LT"
+            };
+
+        // const firebaseConfig = typeof __firebase_config !== 'undefined' ? JSON.parse(__firebase_config) : { apiKey: "your-fallback-api-key", authDomain: "...", projectId: "..." };
+        const appId = typeof __app_id !== 'undefined' ? __app_id : '1:529023143047:web:0e019e092725e700363c22';
         
         const PARKS = [
             { id: 'sa_portaugusta', name: 'Port Augusta, SA', offer: 'Stay 4, Pay 3', image: 'https://placehold.co/600x400/3498db/ffffff?text=Port+Augusta' },
