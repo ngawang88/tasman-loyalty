@@ -34,23 +34,89 @@
             transition: opacity 0.3s ease;
         }
         .btn {
-            @apply font-bold py-2 px-4 rounded-lg transition duration-300 ease-in-out;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.3s;
         }
         .btn-primary {
-            @apply bg-blue-600 text-white hover:bg-blue-700;
+            background-color: #2563eb;
+            color: #fff;
+        }
+        .btn-primary:hover {
+            background-color: #1d4ed8;
         }
         .btn-secondary {
-             @apply bg-emerald-500 text-white hover:bg-emerald-600;
+            background-color: #10b981;
+            color: #fff;
         }
-         .btn-danger {
-            @apply bg-red-500 text-white hover:bg-red-600;
+        .btn-secondary:hover {
+            background-color: #059669;
+        }
+        .btn-danger {
+            background-color: #ef4444;
+            color: #fff;
+        }
+        .btn-danger:hover {
+            background-color: #dc2626;
         }
         .btn-disabled {
-            @apply bg-gray-400 cursor-not-allowed;
+            background-color: #9ca3af;
+            cursor: not-allowed;
         }
         .park-card.hidden {
             display: none;
         }
+        /* --- Achievement Modal Styles (from achivement.html) --- */
+        .modal-container {
+            display: flex;
+            opacity: 0;
+            visibility: hidden;
+            pointer-events: none;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            position: fixed;
+            top: 0; left: 0; right: 0; bottom: 0;
+            align-items: center; justify-content: center;
+            z-index: 50;
+        }
+        .modal-container.open {
+            opacity: 1; visibility: visible; pointer-events: auto;
+        }
+        .modal-content {
+            transform: scale(0.95);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .modal-container.open .modal-content {
+            transform: scale(1);
+        }
+        .font-montserrat { font-family: 'Montserrat', sans-serif; }
+        .font-nunito { font-family: 'Nunito', sans-serif; }
+        .font-playfair { font-family: 'Playfair Display', serif; }
+        .topo-bg {
+            background-color: #ffffff;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23e5e7eb' fill-opacity='0.4'%3E%3Cpath opacity='.5' d='M96 95h4v1h-4v-1zm-7 5v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zM66 95v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zM46 95v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zM26 95v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zm-2-2v-1h-2v1h2zM6 95v-1H4v1h2zm-2-2v-1H2v1h2zm-2-2v-1H0v1h2z'/%3E%3Cpath d='M4 95h2v1H4v-1zm2-2h2v1H6v-1zm2-2h2v1H8v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v-1zm2-2h2v1h-2v")
+        }
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100%) rotateZ(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotateZ(360deg); opacity: 0; }
+        }
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: #fde047;
+            opacity: 0;
+            animation: confetti-fall 5s linear infinite;
+        }
+        .confetti:nth-child(2) { background-color: #f472b6; animation-delay: 0.5s; left: 10%; }
+        .confetti:nth-child(3) { background-color: #60a5fa; animation-delay: 1s; left: 20%; }
+        .confetti:nth-child(4) { background-color: #4ade80; animation-delay: 1.5s; left: 30%; }
+        .confetti:nth-child(5) { background-color: #fde047; animation-delay: 2s; left: 40%; }
+        .confetti:nth-child(6) { background-color: #f472b6; animation-delay: 2.5s; left: 50%; }
+        .confetti:nth-child(7) { background-color: #60a5fa; animation-delay: 3s; left: 60%; }
+        .confetti:nth-child(8) { background-color: #4ade80; animation-delay: 3.5s; left: 70%; }
+        .confetti:nth-child(9) { background-color: #fde047; animation-delay: 4s; left: 80%; }
+        .confetti:nth-child(10) { background-color: #f472b6; animation-delay: 4.5s; left: 90%; }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -140,6 +206,12 @@
             <p id="modal-description" class="text-gray-600 mb-6"></p>
             <button id="modal-action-button" class="btn w-full">Close</button>
         </div>
+    </div>
+
+    <!-- Dynamic Badge Achievement Modal (single instance) -->
+    <div id="badge-modal" class="modal-container">
+        <div class="modal-overlay absolute w-full h-full bg-slate-900/50 backdrop-blur-sm"></div>
+        <div id="badge-modal-content" class="modal-content relative w-full max-w-md m-4 text-center rounded-2xl shadow-2xl bg-white overflow-hidden"></div>
     </div>
 
     <script type="module">
@@ -282,6 +354,44 @@
         // --- DATA HANDLING ---
         const getUserDocRef = () => doc(db, 'artifacts', appId, 'users', userId);
 
+        // Helper: Check and award milestones and badges
+        async function checkAndAwardMilestonesAndBadges(bookings, earnedBadges, completedMilestones) {
+            const userDocRef = getUserDocRef();
+            const uniqueParks = Array.from(new Set(bookings.map(b => b.parkId)));
+            const totalStays = bookings.length;
+            let newMilestones = [];
+            let newBadges = [];
+
+            // --- Milestone Rewards ---
+            if (!completedMilestones.includes('firstStay') && totalStays >= 1) newMilestones.push('firstStay');
+            if (!completedMilestones.includes('fifthStay') && totalStays >= 5) newMilestones.push('fifthStay');
+            if (!completedMilestones.includes('tenthStay') && totalStays >= 10) newMilestones.push('tenthStay');
+            // First stay at a new park (award for each new park)
+            uniqueParks.forEach(parkId => {
+                const milestoneId = `firstAt_${parkId}`;
+                if (!completedMilestones.includes(milestoneId)) newMilestones.push(milestoneId);
+            });
+            // (Anniversary and Feedback milestones can be added similarly)
+
+            // --- Achievement Badges ---
+            if (!earnedBadges.includes('parkHopper') && uniqueParks.length >= 3) newBadges.push('parkHopper');
+            if (!earnedBadges.includes('trailTrekker') && uniqueParks.length >= 5) newBadges.push('trailTrekker');
+            // Regional Explorer: all parks in a region (assuming region logic, here just all parks)
+            if (!earnedBadges.includes('regionalExplorer')) {
+                // For demo, if all parks visited
+                if (uniqueParks.length === PARKS.length) newBadges.push('regionalExplorer');
+            }
+            // (Other badges: family/couple/event/nature/referral/challenge/partner can be added as needed)
+
+            // Update Firestore if new milestones or badges
+            if (newMilestones.length > 0) {
+                await updateDoc(userDocRef, { completedMilestones: arrayUnion(...newMilestones) });
+            }
+            if (newBadges.length > 0) {
+                await updateDoc(userDocRef, { earnedBadges: arrayUnion(...newBadges) });
+            }
+        }
+
         async function initializeUserData() {
             const userDocRef = getUserDocRef();
             const challengeProgress = CHALLENGES.reduce((acc, c) => ({ ...acc, [c.id]: { progress: 0, status: 'not_joined' } }), {});
@@ -301,6 +411,7 @@
             }, (error) => console.error("Snapshot listener error:", error));
         }
         
+        // Update handleBookStay to check for milestones and badges
         async function handleBookStay(parkId, parkName) {
             if (!userId) return;
             const booking = {
@@ -311,6 +422,12 @@
                 extended: 0
             };
             await updateDoc(getUserDocRef(), { bookings: arrayUnion(booking) });
+            // Fetch latest user data to check for milestones/badges
+            const docSnap = await getDoc(getUserDocRef());
+            if (docSnap.exists()) {
+                const data = docSnap.data();
+                await checkAndAwardMilestonesAndBadges(data.bookings.concat([booking]), data.earnedBadges || [], data.completedMilestones || []);
+            }
             showNotificationModal("Booking Confirmed!", `You're all set for your trip to ${parkName}.`);
         }
         
@@ -343,24 +460,23 @@
 
         function updateBookingsUI(bookings) {
             if (bookings.length === 0) {
-                ui.bookingList.innerHTML = `<p class="text-gray-500">No bookings yet. Plan your first adventure!</p>`;
+                ui.bookingList.innerHTML = '<p class="text-gray-500">No bookings yet. Plan your first adventure!</p>';
                 return;
             }
-            ui.bookingList.innerHTML = bookings.slice().reverse().map(b => `
-                <div class="card-item bg-gray-50 p-3 rounded-lg flex justify-between items-center">
-                    <div>
-                        <p class="font-bold">${b.parkName}</p>
-                        <p class="text-sm text-gray-600">Booked on: ${b.date} ${b.extended > 0 ? `<span class="text-blue-600 font-semibold">(Extended ${b.extended}x)</span>` : ''}</p>
-                    </div>
-                    <button class="extend-stay-btn btn btn-secondary !py-1 !px-2 text-sm" data-booking-id="${b.bookingId}">Extend</button>
-                </div>
-            `).join('');
+            ui.bookingList.innerHTML = bookings.slice().reverse().map(function(b) {
+                var extended = b.extended > 0 ? '<span class="text-blue-600 font-semibold">(Extended ' + b.extended + 'x)</span>' : '';
+                return '<div class="card-item bg-gray-50 p-3 rounded-lg flex justify-between items-center">' +
+                    '<div>' +
+                        '<p class="font-bold">' + b.parkName + '</p>' +
+                        '<p class="text-sm text-gray-600">Booked on: ' + b.date + ' ' + extended + '</p>' +
+                    '</div>' +
+                    '<button class="extend-stay-btn btn btn-secondary !py-1 !px-2 text-sm" data-booking-id="' + b.bookingId + '">Extend</button>' +
+                '</div>';
+            }).join('');
         }
-        
         function updateLoyaltyUI(uniqueStays, earnedBadges, completedMilestones, challengeProgress, totalStays){
             const currentTier = [...TIERS].reverse().find(t => uniqueStays >= t.stays) || TIERS[0];
             const nextTier = TIERS.find(t => uniqueStays < t.stays);
-            
             ui.currentTier.textContent = currentTier.name;
             ui.tierDescription.textContent = currentTier.description;
             document.querySelectorAll('[data-tier-name]').forEach(card => {
@@ -368,41 +484,43 @@
                 card.classList.toggle('text-white', card.dataset.tierName === currentTier.name);
                 card.classList.toggle('bg-gray-200', card.dataset.tierName !== currentTier.name);
             });
-
             if (nextTier) {
                 const prevTierStays = TIERS[TIERS.indexOf(nextTier) - 1]?.stays || 0;
                 const progress = ((uniqueStays - prevTierStays) / (nextTier.stays - prevTierStays)) * 100;
-                ui.tierProgress.style.width = `${Math.min(progress, 100)}%`;
-                ui.nextTierInfo.textContent = `Next Tier: ${nextTier.name} (${nextTier.stays} stays)`;
-                ui.stayCount.textContent = `${uniqueStays} / ${nextTier.stays}`;
+                ui.tierProgress.style.width = Math.min(progress, 100) + '%';
+                ui.nextTierInfo.textContent = 'Next Tier: ' + nextTier.name + ' (' + nextTier.stays + ' stays)';
+                ui.stayCount.textContent = uniqueStays + ' / ' + nextTier.stays;
             } else {
                 ui.tierProgress.style.width = '100%';
-                ui.nextTierInfo.textContent = "You are at the highest tier!";
-                ui.stayCount.textContent = `${uniqueStays} Unique Stays`;
+                ui.nextTierInfo.textContent = 'You are at the highest tier!';
+                ui.stayCount.textContent = uniqueStays + ' Unique Stays';
             }
-
             ui.milestoneList.innerHTML = MILESTONES.map(m => {
-                const isCompleted = uniqueStays >= m.stays;
-                return `<li class="card-item flex items-center justify-between p-3 rounded-lg ${isCompleted ? 'bg-emerald-100 text-emerald-800' : 'bg-gray-100'}"><div><p class="font-semibold">${m.name}</p><p class="text-sm">${m.reward}</p></div><div class="text-2xl">${isCompleted ? '✅' : '🔒'}</div></li>`;
+                const isCompleted = completedMilestones.includes(m.id) || uniqueStays >= m.stays;
+                return '<li class="card-item flex items-center justify-between p-3 rounded-lg ' + (isCompleted ? 'bg-emerald-100 text-emerald-800' : 'bg-gray-100') + '"><div><p class="font-semibold">' + m.name + '</p><p class="text-sm">' + m.reward + '</p></div><div class="text-2xl">' + (isCompleted ? '✅' : '🔒') + '</div></li>';
             }).join('');
-            
-            ui.badgeGrid.innerHTML = BADGES.map(b => {
-                const isEarned = earnedBadges.includes(b.id) || (b.stays !== Infinity && uniqueStays >= b.stays);
-                return `<div class="card-item flex flex-col items-center justify-center p-2 rounded-lg text-center ${isEarned ? 'bg-amber-100' : 'bg-gray-100 opacity-60'}"><div class="text-4xl">${b.icon}</div><p class="text-xs font-semibold mt-1">${b.name}</p></div>`;
-            }).join('');
-            
-            ui.challengeList.innerHTML = CHALLENGES.map(c => {
-                const progressData = challengeProgress[c.id] || { progress: 0, status: 'not_joined' };
-                let statusHTML;
-                if(progressData.status === 'completed'){
-                    statusHTML = `<div class="text-emerald-600 font-bold">Completed! ✅</div>`
-                } else if(progressData.status === 'in_progress'){
-                    const progressPercent = (totalStays - (progressData.startStays || 0)) / c.staysNeeded * 100;
-                    statusHTML = `<p class="text-sm mb-1">${totalStays - (progressData.startStays || 0)}/${c.staysNeeded} stays</p><div class="progress-bar-container"><div class="progress-bar bg-yellow-500" style="width:${progressPercent}%"></div></div>`;
-                } else {
-                    statusHTML = `<button data-challenge-id="${c.id}" class="join-challenge-btn btn btn-secondary !py-1 !px-2 text-sm">Join</button>`;
+            completedMilestones.filter(function(id){return id.startsWith('firstAt_')}).forEach(function(mid){
+                var park = PARKS.find(function(p){return mid.endsWith(p.id)});
+                if (park) {
+                    ui.milestoneList.innerHTML += '<li class="card-item flex items-center justify-between p-3 rounded-lg bg-emerald-50 text-emerald-700"><div><p class="font-semibold">First Stay at ' + park.name + '</p><p class="text-sm">Local partner voucher</p></div><div class="text-2xl">🎉</div></li>';
                 }
-                return `<li class="card-item bg-gray-100 p-4 rounded-lg"><div class="flex items-center justify-between"><div class="flex items-center space-x-4"><div class="text-3xl">${c.icon}</div><div><p class="font-semibold">${c.name}</p><p class="text-sm text-gray-600">${c.description}</p></div></div><div class="text-right">${statusHTML}</div></div></li>`;
+            });
+            ui.badgeGrid.innerHTML = BADGES.map(function(b){
+                var isEarned = earnedBadges.includes(b.id) || (b.stays !== Infinity && uniqueStays >= b.stays);
+                return '<div class="card-item flex flex-col items-center justify-center p-2 rounded-lg text-center ' + (isEarned ? 'bg-amber-100' : 'bg-gray-100 opacity-60') + '"><div class="text-4xl">' + b.icon + '</div><p class="text-xs font-semibold mt-1">' + b.name + '</p></div>';
+            }).join('');
+            ui.challengeList.innerHTML = CHALLENGES.map(function(c){
+                var progressData = challengeProgress[c.id] || { progress: 0, status: 'not_joined' };
+                var statusHTML;
+                if(progressData.status === 'completed'){
+                    statusHTML = '<div class="text-emerald-600 font-bold">Completed! ✅</div>';
+                } else if(progressData.status === 'in_progress'){
+                    var progressPercent = (totalStays - (progressData.startStays || 0)) / c.staysNeeded * 100;
+                    statusHTML = '<p class="text-sm mb-1">' + (totalStays - (progressData.startStays || 0)) + '/' + c.staysNeeded + ' stays</p><div class="progress-bar-container"><div class="progress-bar bg-yellow-500" style="width:' + progressPercent + '%"></div></div>';
+                } else {
+                    statusHTML = '<button data-challenge-id="' + c.id + '" class="join-challenge-btn btn btn-secondary !py-1 !px-2 text-sm">Join</button>';
+                }
+                return '<li class="card-item bg-gray-100 p-4 rounded-lg"><div class="flex items-center justify-between"><div class="flex items-center space-x-4"><div class="text-3xl">' + c.icon + '</div><div><p class="font-semibold">' + c.name + '</p><p class="text-sm text-gray-600">' + c.description + '</p></div></div><div class="text-right">' + statusHTML + '</div></div></li>';
             }).join('');
         }
         
@@ -456,6 +574,111 @@
             }
         });
 
+        // --- BADGE MODAL LOGIC ---
+        const badgeModal = document.getElementById('badge-modal');
+        const badgeModalContent = document.getElementById('badge-modal-content');
+
+        const BADGE_TEMPLATES = {
+            parkHopper: `
+                <div class="topo-bg p-8 md:p-10 rounded-2xl">
+                    <svg class="w-24 h-24 mx-auto mb-4 text-green-600" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="32" cy="32" r="30" fill="#D1FAE5"/>
+                        <circle cx="32" cy="32" r="25" stroke="#10B981" stroke-width="3"/>
+                        <path d="M32 18L36 28L46 32L36 36L32 46L28 36L18 32L28 28L32 18Z" fill="#10B981"/>
+                        <path d="M32 6V12M32 58V52M6 32H12M58 32H52" stroke="#10B981" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="font-montserrat text-2xl font-bold uppercase tracking-wide text-gray-800">Badge Unlocked: Park Hopper!</h3>
+                    <p class="text-gray-600 mt-3 mb-6">Congratulations, you're a true adventurer! You've earned this for completing stays at <strong>3 different parks</strong>.</p>
+                    <button class="w-full bg-green-600 text-white font-bold py-3 px-4 rounded-lg shadow-md hover:bg-green-700 transition-all transform hover:scale-105">SHARE YOUR ACHIEVEMENT</button>
+                </div>
+            `,
+            trailTrekker: `
+                <div class="p-8 md:p-10 rounded-2xl bg-yellow-50 border-4 border-yellow-50">
+                    <svg class="w-24 h-24 mx-auto mb-4" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M50,5 A45,45 0 1,1 49.9,5 Z" fill="#FEF3C7"/>
+                        <path d="M50,8 A42,42 0 1,1 49.9,8 Z" fill="none" stroke="#FBBF24" stroke-width="3" stroke-dasharray="10 5"/>
+                        <path d="M30 65 L 50 40 L 70 65 Z" fill="#FBBF24"/>
+                        <circle cx="50" cy="30" r="10" fill="#FDE047"/>
+                        <path d="M20,65 Q50,75 80,65" stroke="#D97706" stroke-width="3" fill="none" stroke-linecap="round"/>
+                    </svg>
+                    <h3 class="font-nunito text-3xl font-bold text-yellow-800">Trail Trekker Badge!</h3>
+                    <p class="font-nunito text-yellow-700 mt-2 mb-6">You love the journey! Earned for 5 unique park stays.</p>
+                    <button class="w-full bg-orange-500 text-white font-bold py-3 px-4 rounded-full shadow-lg hover:bg-orange-600 transition-all transform hover:scale-105">SHARE OUR ADVENTURE</button>
+                </div>
+            `,
+            regionalExplorer: `
+                <div class="p-8 md:p-10 rounded-2xl bg-gray-900 border-2 border-yellow-400/30">
+                    <svg class="w-28 h-28 mx-auto mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#FBBF24;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+                            </linearGradient>
+                        </defs>
+                        <path d="M55.12,28.88A24,24,0,0,0,32,8,24,24,0,0,0,8.88,28.88,1,1,0,0,0,8,30v2a1,1,0,0,0,.08.38,24,24,0,0,0,46.84,0A1,1,0,0,0,56,32V30A1,1,0,0,0,55.12,28.88ZM32,54A22,22,0,0,1,10,32V30.5a21.94,21.94,0,0,1,6.44-15.56A21.94,21.94,0,0,1,32,10a21.94,21.94,0,0,1,15.56,6.44A21.94,21.94,0,0,1,54,30.5V32A22,22,0,0,1,32,54Z" fill="url(#gold-gradient)"/>
+                        <path d="M32,14a18,18,0,1,0,18,18A18,18,0,0,0,32,14Zm-4.24,27.76L22.24,36.24l7.07-7.07,5.66,5.66L42,28.24l5.51,5.52-7.07,7.07-5.66-5.66Z" fill="url(#gold-gradient)" opacity="0.5"/>
+                        <circle cx="32" cy="32" r="4" fill="url(#gold-gradient)"/>
+                    </svg>
+                    <h3 class="font-playfair text-3xl font-bold text-yellow-400">Regional Explorer</h3>
+                    <p class="text-xl font-playfair text-gray-300 mt-1 mb-1">Achievement Unlocked</p>
+                    <p class="text-gray-400 mt-4 mb-6">You've done what few have: visited every single park in the <strong>[Region Name]</strong> area. A legendary achievement.</p>
+                    <button class="w-full bg-yellow-500 text-gray-900 font-bold py-3 px-4 rounded-lg shadow-lg hover:bg-yellow-400 transition-all transform hover:scale-105">SHARE MY CONQUEST</button>
+                </div>
+            `,
+            challengeConqueror: `
+                <div class="p-8 md:p-10 rounded-2xl bg-white relative">
+                    <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+                        <div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div><div class="confetti"></div>
+                    </div>
+                    <svg class="w-24 h-24 mx-auto mb-4" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="star-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#EC4899;"/>
+                                <stop offset="100%" style="stop-color:#8B5CF6;"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M50.5,21.3l-16-2.3c-1.1-0.2-2-0.8-2.5-1.8L25.3,3.4c-0.5-1-1.6-1.6-2.8-1.6s-2.3,0.6-2.8,1.6L13.1,17.1 c-0.5,1-1.5,1.6-2.5,1.8l-16,2.3c-1.1,0.2-2,1-2.3,2.2s0.1,2.4,1,3.2l11.6,11.3c0.8,0.8,1.1,1.9,0.9,3l-2.7,15.9 c-0.2,1.1,0.3,2.3,1.3,2.9c1,0.6,2.3,0.6,3.3-0.1l14.3-7.5c1-0.5,2.1-0.5,3.1,0l14.3,7.5c1,0.5,2.3,0.7,3.3,0.1 c1-0.6,1.5-1.8,1.3-2.9l-2.7-15.9c-0.2-1.1,0.2-2.2,0.9-3l11.6-11.3c0.9-0.8,1.3-2,1-3.2S51.6,21.4,50.5,21.3z" transform="scale(1.2) translate(-6, -2)" fill="url(#star-gradient)"/>
+                        <path d="M26 34h-4a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4V34zM42 34h-4v10h4a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1zM32 26l-6 6h12l-6-6z" fill="white"/>
+                    </svg>
+                    <h3 class="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-violet-500">YOU'RE A STAR!</h3>
+                    <p class="text-gray-600 mt-3 mb-6">Thanks for spreading the word! You've earned the <strong>Challenge Conqueror</strong> badge for completing your first challenge.</p>
+                    <button class="w-full bg-pink-600 text-white font-bold py-3 px-4 rounded-lg shadow-lg hover:bg-pink-700 transition-all transform hover:scale-105 animate-pulse">I'M A STAR!</button>
+                </div>
+            `
+        };
+
+        function showBadgeModal(badgeId) {
+            badgeModalContent.innerHTML = BADGE_TEMPLATES[badgeId] || `<p>Badge info not found.</p>`;
+            badgeModal.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeBadgeModal() {
+            badgeModal.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+        badgeModal.addEventListener('click', e => {
+            if (e.target.classList.contains('modal-overlay')) closeBadgeModal();
+        });
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'Escape') closeBadgeModal();
+        });
+
+        // Make badges clickable in badge grid
+        ui.badgeGrid.addEventListener('click', e => {
+            const badgeDiv = e.target.closest('.card-item');
+            if (badgeDiv) {
+                const badgeName = badgeDiv.querySelector('p')?.textContent;
+                let badgeId = null;
+                if (badgeName === 'Park Hopper') badgeId = 'parkHopper';
+                else if (badgeName === 'Trail Trekker') badgeId = 'trailTrekker';
+                else if (badgeName === 'Regional Explorer') badgeId = 'regionalExplorer';
+                else if (badgeName === 'Challenge Conqueror') badgeId = 'challengeConqueror';
+                if (badgeId) showBadgeModal(badgeId);
+            }
+        });
+
+        
+        
     </script>
 </body>
 </html>
